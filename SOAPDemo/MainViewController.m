@@ -61,8 +61,21 @@
 
 - (void)metaSearchComplete:(MetaSearchService *)service {
     [_hud hide:YES];
+    
+    if (!_metaSearchService.success) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Service Failure" 
+                                                        message:[NSString stringWithFormat:@"Service Error: %@", _metaSearchService.statusMessage]
+                                                       delegate:self 
+                                              cancelButtonTitle:@"OK" 
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+        [alert release];
+        return;
+    }
+    
     SearchResultsViewController *results = [[SearchResultsViewController alloc] 
                                             initWithNibName:@"SearchResultsViewController" bundle:nil];
+    
     [results setItems:_metaSearchService.results];
     [self.navigationController pushViewController:results animated:YES];
     [results release];

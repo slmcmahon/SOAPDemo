@@ -63,6 +63,7 @@ NSString *const META_SEARCH_SOAP_ACTION = @"http://peopleask.ooz.ie/soap/GetQues
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
     _success = YES;
+    NSLog(@"Response Code: %d", [request responseStatusCode]);
     _statusMessage = [request responseStatusMessage];
     NSString *responseString = [request responseString];
     NSLog(@"Response: %@", responseString);
@@ -76,7 +77,7 @@ NSString *const META_SEARCH_SOAP_ACTION = @"http://peopleask.ooz.ie/soap/GetQues
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
     _success = NO;
-    _statusMessage = [request responseStatusMessage];
+    _statusMessage = [[request error] localizedDescription];
     if (self.delegate && [self.delegate respondsToSelector:@selector(metaSearchComplete:)])
         [_delegate metaSearchComplete:self];
 }

@@ -44,6 +44,7 @@
 		DC3DBFFA1501A53B0057E920 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3DBFF91501A53B0057E920 /* CFNetwork.framework */; };
 		DC3DBFFC1501A5510057E920 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3DBFFB1501A5510057E920 /* SystemConfiguration.framework */; };
 		DC3DBFFE1501A5610057E920 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3DBFFD1501A5610057E920 /* MobileCoreServices.framework */; };
+		DCBEC0CE1508391F006CE677 /* README in Resources */ = {isa = PBXBuildFile; fileRef = DCBEC0CD1508391F006CE677 /* README */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		DC3DBFF91501A53B0057E920 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DC3DBFFB1501A5510057E920 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DC3DBFFD1501A5610057E920 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DCBEC0CD1508391F006CE677 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 		DC3DBF8F1501A3EF0057E920 /* SOAPDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DCBEC0CD1508391F006CE677 /* README */,
 				DC3DBFAC1501A4B30057E920 /* ASI-HTTP */,
 				DC3DBFC31501A4B30057E920 /* json-framework */,
 				DC3DBFDE1501A4B40057E920 /* MBProgressHUD */,
@@ -329,6 +332,7 @@
 				DC3DBF941501A3EF0057E920 /* InfoPlist.strings in Resources */,
 				DC298605150275C000E73699 /* MainViewController.xib in Resources */,
 				DC29860A150276C200E73699 /* SearchResultsViewController.xib in Resources */,
+				DCBEC0CE1508391F006CE677 /* README in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
